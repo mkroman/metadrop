@@ -202,6 +202,86 @@
 			<key>Content</key>
 			<dict>
 				<key>PBXProjectModuleGUID</key>
+				<string>4DC26A5F12BEFC160061AE0E</string>
+				<key>PBXProjectModuleLabel</key>
+				<string>FileUploader.m</string>
+				<key>PBXSplitModuleInNavigatorKey</key>
+				<dict>
+					<key>Split0</key>
+					<dict>
+						<key>PBXProjectModuleGUID</key>
+						<string>4DC26A6012BEFC160061AE0E</string>
+						<key>PBXProjectModuleLabel</key>
+						<string>FileUploader.m</string>
+						<key>_historyCapacity</key>
+						<integer>0</integer>
+						<key>bookmark</key>
+						<string>4DC26ADC12BF1B5C0061AE0E</string>
+						<key>history</key>
+						<array>
+							<string>4DC26A5C12BEFBDA0061AE0E</string>
+						</array>
+					</dict>
+					<key>SplitCount</key>
+					<string>1</string>
+				</dict>
+				<key>StatusBarVisibility</key>
+				<true/>
+			</dict>
+			<key>Geometry</key>
+			<dict>
+				<key>Frame</key>
+				<string>{{0, 20}, {972, 732}}</string>
+				<key>PBXModuleWindowStatusBarHidden2</key>
+				<false/>
+				<key>RubberWindowFrame</key>
+				<string>21 78 972 773 0 0 1680 1028 </string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>PBXProjectModuleGUID</key>
+				<string>4DC26ABB12BF16FC0061AE0E</string>
+				<key>PBXProjectModuleLabel</key>
+				<string>MetadropAppDelegate.h</string>
+				<key>PBXSplitModuleInNavigatorKey</key>
+				<dict>
+					<key>Split0</key>
+					<dict>
+						<key>PBXProjectModuleGUID</key>
+						<string>4DC26ABC12BF16FC0061AE0E</string>
+						<key>PBXProjectModuleLabel</key>
+						<string>MetadropAppDelegate.h</string>
+						<key>_historyCapacity</key>
+						<integer>0</integer>
+						<key>bookmark</key>
+						<string>4DC26ADD12BF1B5C0061AE0E</string>
+						<key>history</key>
+						<array>
+							<string>4DC26AB812BF16EF0061AE0E</string>
+						</array>
+					</dict>
+					<key>SplitCount</key>
+					<string>1</string>
+				</dict>
+				<key>StatusBarVisibility</key>
+				<true/>
+			</dict>
+			<key>Geometry</key>
+			<dict>
+				<key>Frame</key>
+				<string>{{0, 20}, {752, 678}}</string>
+				<key>PBXModuleWindowStatusBarHidden2</key>
+				<false/>
+				<key>RubberWindowFrame</key>
+				<string>38 283 752 719 0 0 1680 1028 </string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>PBXProjectModuleGUID</key>
 				<string>4DC26A9412BF03870061AE0E</string>
 				<key>PBXProjectModuleLabel</key>
 				<string>FileUploader.h</string>
@@ -216,7 +296,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>4DC26A9812BF03F40061AE0E</string>
+						<string>4DC26ADE12BF1B5C0061AE0E</string>
 						<key>history</key>
 						<array>
 							<string>4DC26A8C12BF03260061AE0E</string>
@@ -236,46 +316,6 @@
 				<false/>
 				<key>RubberWindowFrame</key>
 				<string>421 132 752 719 0 0 1680 1028 </string>
-			</dict>
-		</dict>
-		<dict>
-			<key>Content</key>
-			<dict>
-				<key>PBXProjectModuleGUID</key>
-				<string>4DC26A5F12BEFC160061AE0E</string>
-				<key>PBXProjectModuleLabel</key>
-				<string>FileUploader.m</string>
-				<key>PBXSplitModuleInNavigatorKey</key>
-				<dict>
-					<key>Split0</key>
-					<dict>
-						<key>PBXProjectModuleGUID</key>
-						<string>4DC26A6012BEFC160061AE0E</string>
-						<key>PBXProjectModuleLabel</key>
-						<string>FileUploader.m</string>
-						<key>_historyCapacity</key>
-						<integer>0</integer>
-						<key>bookmark</key>
-						<string>4DC26A9912BF03F40061AE0E</string>
-						<key>history</key>
-						<array>
-							<string>4DC26A5C12BEFBDA0061AE0E</string>
-						</array>
-					</dict>
-					<key>SplitCount</key>
-					<string>1</string>
-				</dict>
-				<key>StatusBarVisibility</key>
-				<true/>
-			</dict>
-			<key>Geometry</key>
-			<dict>
-				<key>Frame</key>
-				<string>{{0, 20}, {972, 732}}</string>
-				<key>PBXModuleWindowStatusBarHidden2</key>
-				<false/>
-				<key>RubberWindowFrame</key>
-				<string>731 250 972 773 0 0 1680 1028 </string>
 			</dict>
 		</dict>
 	</array>
@@ -560,16 +600,16 @@
 	<integer>0</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>4DC26A9112BF03870061AE0E</string>
 		<string>1C530D60069F1CE1000CFCEE</string>
 		<string>4DC26A2812BEF6A00061AE0E</string>
 		<string>4DC26A2912BEF6A00061AE0E</string>
-		<string>1C530D5B069F1CE1000CFCEE</string>
 		<string>1C530D54069F1CE1000CFCEE</string>
 		<string>1C530D52069F1CE1000CFCEE</string>
-		<string>4DC26A5F12BEFC160061AE0E</string>
 		<string>4DC26A9412BF03870061AE0E</string>
 		<string>/Users/mk/Projects/Metadrop/Metadrop.xcodeproj</string>
+		<string>4DC26ABB12BF16FC0061AE0E</string>
+		<string>1C530D5B069F1CE1000CFCEE</string>
+		<string>4DC26A5F12BEFC160061AE0E</string>
 	</array>
 	<key>WindowString</key>
 	<string>1027 575 446 419 0 0 1680 1028 </string>
@@ -1041,6 +1081,8 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -1086,7 +1128,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C530D5B069F1CE1000CFCEE</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

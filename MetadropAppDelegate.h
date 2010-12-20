@@ -11,6 +11,7 @@
 
 @interface MetadropAppDelegate : NSObject <NSApplicationDelegate> {
     NSWindow *window;
+	FileUploader *fileUploader;
 }
 
 @property (assign) IBOutlet NSWindow *window;

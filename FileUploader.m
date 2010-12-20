@@ -13,11 +13,15 @@
 
 - (id)init {
 	if (!(self = [super init])) return nil;
+	
 	uploadURL = [[NSURL alloc] initWithString:@"http://metabox.it/"];
+	receivedData = [[NSMutableData alloc] init];
+	
 	return self;
 }
 
 - (void)dealloc {
+	[receivedData release];
 	[uploadURL release];
 	[super dealloc];
 }
@@ -46,16 +50,19 @@
 	
 	[request setHTTPBody:requestBody];
 	
-	[file release];
-	[requestBody release];
-	
 	[[NSURLConnection alloc] initWithRequest:request delegate:self];
 	
+	[file release];
 	[request release];
+	[requestBody release];
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
-	NSString *result = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+	[receivedData appendData:data];
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+	NSString *result = [[NSString alloc] initWithData:receivedData encoding:NSUTF8StringEncoding];
 	
 	if ([result hasPrefix:@"http://"]) {
 		NSRunAlertPanel(@"Metabox", @"The file was successfully uploaded.\r\n\r\nYour clipboard is now containing the address for the file.", nil, nil, nil);
@@ -70,13 +77,12 @@
 	}
 	
 	[result release];
-}
-
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
 	[connection release];
+	[receivedData setLength:0];
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+	[receivedData setLength:0];
 	[connection release];
 }
 

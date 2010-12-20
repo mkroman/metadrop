@@ -13,18 +13,17 @@
 @synthesize window;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-	
+	fileUploader = [[FileUploader alloc] init];
 }
 
 - (BOOL)application:(NSApplication *)sender openFile:(NSString *)path {
-	FileUploader *fileUploader = [[FileUploader alloc] init];
 	[fileUploader uploadWithContentsOfFile:path];
-	[fileUploader release];
 	
 	return YES;
 }
 
 - (void)dealloc {
+	[fileUploader release];
 	[super dealloc];
 }
 

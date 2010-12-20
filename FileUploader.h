@@ -11,6 +11,7 @@
 
 @interface FileUploader : NSObject {
 	NSURL *uploadURL;
+	NSMutableData *receivedData;
 }
 
 - (void)uploadWithContentsOfFile:(NSString *)path;
