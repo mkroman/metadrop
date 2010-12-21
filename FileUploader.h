@@ -1,18 +1,12 @@
-//
-//  FileUploader.h
-//  Metadrop
-//
-//  Created by Mikkel Kroman on 12/18/10.
-//  Copyright 2010 Maero. All rights reserved.
-//
-
-#import <Cocoa/Cocoa.h>
-
+#import "FileUploaderDelegate.h"
 
 @interface FileUploader : NSObject {
+	id delegate;
 	NSURL *uploadURL;
 	NSMutableData *receivedData;
 }
+
+- (id)initWithDelegate:(id)object;
 
 - (void)uploadWithContentsOfFile:(NSString *)path;
 

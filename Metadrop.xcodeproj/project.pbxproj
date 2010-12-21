@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
-		256AC3DA0F4B6AC300CF3369 /* MetadropAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* MetadropAppDelegate.m */; };
+		256AC3DA0F4B6AC300CF3369 /* ApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* ApplicationDelegate.m */; };
 		4D366E8412BE861400E7C1FC /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 4D366E8312BE861400E7C1FC /* Icon.icns */; };
 		4DA9DB0812BD5E3200473DF0 /* FileUploader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA9DB0712BD5E3200473DF0 /* FileUploader.m */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
@@ -21,13 +21,14 @@
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		256AC3D80F4B6AC300CF3369 /* MetadropAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetadropAppDelegate.h; sourceTree = "<group>"; };
-		256AC3D90F4B6AC300CF3369 /* MetadropAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MetadropAppDelegate.m; sourceTree = "<group>"; };
-		256AC3F00F4B6AF500CF3369 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Prefix.pch; path = Metadrop_Prefix.pch; sourceTree = "<group>"; };
+		256AC3D80F4B6AC300CF3369 /* ApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationDelegate.h; sourceTree = "<group>"; };
+		256AC3D90F4B6AC300CF3369 /* ApplicationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationDelegate.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		4D2485BC12C02C9500D7AD62 /* FileUploaderDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileUploaderDelegate.h; sourceTree = "<group>"; };
 		4D366E8312BE861400E7C1FC /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
+		4D697ECC12C036720011790A /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		4DA9DB0612BD5E3200473DF0 /* FileUploader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileUploader.h; sourceTree = "<group>"; };
 		4DA9DB0712BD5E3200473DF0 /* FileUploader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileUploader.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Metadrop-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Metadrop-Info.plist"; sourceTree = "<group>"; };
@@ -51,8 +52,9 @@
 			children = (
 				4DA9DB0612BD5E3200473DF0 /* FileUploader.h */,
 				4DA9DB0712BD5E3200473DF0 /* FileUploader.m */,
-				256AC3D80F4B6AC300CF3369 /* MetadropAppDelegate.h */,
-				256AC3D90F4B6AC300CF3369 /* MetadropAppDelegate.m */,
+				4D2485BC12C02C9500D7AD62 /* FileUploaderDelegate.h */,
+				256AC3D80F4B6AC300CF3369 /* ApplicationDelegate.h */,
+				256AC3D90F4B6AC300CF3369 /* ApplicationDelegate.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -98,7 +100,7 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				256AC3F00F4B6AF500CF3369 /* Prefix.pch */,
+				4D697ECC12C036720011790A /* Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
 			name = "Other Sources";
@@ -188,7 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
-				256AC3DA0F4B6AC300CF3369 /* MetadropAppDelegate.m in Sources */,
+				256AC3DA0F4B6AC300CF3369 /* ApplicationDelegate.m in Sources */,
 				4DA9DB0812BD5E3200473DF0 /* FileUploader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

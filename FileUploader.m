@@ -1,13 +1,4 @@
-//
-//  FileUploader.m
-//  Metadrop
-//
-//  Created by Mikkel Kroman on 12/18/10.
-//  Copyright 2010 Maero. All rights reserved.
-//
-
 #import "FileUploader.h"
-
 
 @implementation FileUploader
 
@@ -20,9 +11,17 @@
 	return self;
 }
 
+- (id)initWithDelegate:(id)object {
+	if (self = [self init])
+		delegate = object;
+	
+	return self;
+}
+
 - (void)dealloc {
 	[receivedData release];
 	[uploadURL release];
+	
 	[super dealloc];
 }
 
@@ -32,7 +31,7 @@
 	
 	NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:uploadURL];
 	
-	NSString *boundary = [NSString stringWithString:@"----------ThIs_Is_tHe_bouNdaRY_$"];
+	NSString *boundary = [NSString stringWithString:@"FIGHT-THE-POWER"];
 	NSString *contentType = [NSString stringWithFormat:@"multipart/form-data; boundary=%@", boundary];
 	
 	[request setHTTPMethod:@"POST"];
@@ -62,23 +61,25 @@
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-	NSString *result = [[NSString alloc] initWithData:receivedData encoding:NSUTF8StringEncoding];
+	NSString *response = [[NSString alloc] initWithData:receivedData encoding:NSUTF8StringEncoding];
 	
-	if ([result hasPrefix:@"http://"]) {
-		NSRunAlertPanel(@"Metabox", @"The file was successfully uploaded.\r\n\r\nYour clipboard is now containing the address for the file.", nil, nil, nil);
-		
-		NSPasteboard *paste = [NSPasteboard generalPasteboard];
-		NSArray *types = [NSArray arrayWithObjects:NSStringPboardType, nil];
-		
-		[paste declareTypes:types owner:self];
-		[paste setString:result forType:NSStringPboardType];
+	if ([response hasPrefix:@"http://"]) {
+	 	if ([delegate respondsToSelector:@selector(fileUploader:didRetrieveRemoteLocation:)]) 
+			[delegate fileUploader:self didRetrieveRemoteLocation:[response substringToIndex:[response length]-1]];
 	} else {
-		NSRunCriticalAlertPanel(@"Metabox", result, nil, nil, nil);
+		NSRunCriticalAlertPanel(@"Metabox", response, nil, nil, nil);
 	}
 	
-	[result release];
+	[response release];
 	[connection release];
 	[receivedData setLength:0];
+}
+
+- (void)connection:(NSURLConnection *)connection didSendBodyData:(NSInteger)bytesWritten totalBytesWritten:(NSInteger)totalBytesWritten totalBytesExpectedToWrite:(NSInteger)totalBytesExpectedToWrite {
+	NSNumber *progress = [NSNumber numberWithFloat:(float)totalBytesWritten / (float)totalBytesExpectedToWrite * 100.0];
+	
+	if ([delegate respondsToSelector:@selector(fileUploader:didChangeProgress:)])
+		[delegate fileUploader:self didChangeProgress:progress];
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
