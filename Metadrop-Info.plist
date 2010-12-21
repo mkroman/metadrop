@@ -11,24 +11,15 @@
 			<array>
 				<string>gif</string>
 				<string>GIF</string>
-			</array>
-			<key>CFBundleTypeName</key>
-			<string>GIF</string>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
-			<key>LSTypeIsPackage</key>
-			<false/>
-			<key>NSPersistentStoreTypeKey</key>
-			<string>XML</string>
-		</dict>
-		<dict>
-			<key>CFBundleTypeExtensions</key>
-			<array>
+				<string>jpg</string>
+				<string>JPG</string>
+				<string>jpeg</string>
+				<string>JPEG</string>
 				<string>png</string>
 				<string>PNG</string>
 			</array>
 			<key>CFBundleTypeName</key>
-			<string>PNG</string>
+			<string>Pictures</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSTypeIsPackage</key>
@@ -43,7 +34,7 @@
 				<string>SWF</string>
 			</array>
 			<key>CFBundleTypeName</key>
-			<string>Flash files</string>
+			<string>Flash Videos</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSTypeIsPackage</key>
@@ -54,13 +45,13 @@
 		<dict>
 			<key>CFBundleTypeExtensions</key>
 			<array>
-				<string>jpg</string>
-				<string>jpeg</string>
-				<string>JPG</string>
-				<string>JPEG</string>
+				<string>ogg</string>
+				<string>m4v</string>
+				<string>mov</string>
+				<string>flv</string>
 			</array>
 			<key>CFBundleTypeName</key>
-			<string>JPEG</string>
+			<string>Videos</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSTypeIsPackage</key>
@@ -76,21 +67,6 @@
 			</array>
 			<key>CFBundleTypeName</key>
 			<string>Audio Track</string>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
-			<key>LSTypeIsPackage</key>
-			<false/>
-			<key>NSPersistentStoreTypeKey</key>
-			<string>XML</string>
-		</dict>
-		<dict>
-			<key>CFBundleTypeExtensions</key>
-			<array>
-				<string>m4v</string>
-				<string>mov</string>
-			</array>
-			<key>CFBundleTypeName</key>
-			<string>QuickTime Screencasts</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSTypeIsPackage</key>

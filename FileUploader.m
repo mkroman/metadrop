@@ -67,7 +67,8 @@
 	 	if ([delegate respondsToSelector:@selector(fileUploader:didRetrieveRemoteLocation:)]) 
 			[delegate fileUploader:self didRetrieveRemoteLocation:[response substringToIndex:[response length]-1]];
 	} else {
-		NSRunCriticalAlertPanel(@"Metabox", response, nil, nil, nil);
+		if ([delegate respondsToSelector:@selector(fileUploader:didFailWithStringError:)])
+			[delegate fileUploader:self didFailWithStringError:response];
 	}
 	
 	[response release];
